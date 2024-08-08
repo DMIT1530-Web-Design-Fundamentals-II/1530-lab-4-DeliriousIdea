@@ -114,7 +114,7 @@ label {
     padding-left: 1rem;
 }
 
-.form-content p {
+.form-content > p {
     padding: 0 1rem;
 }
 
