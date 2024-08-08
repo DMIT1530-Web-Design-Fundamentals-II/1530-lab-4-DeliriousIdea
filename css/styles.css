@@ -37,7 +37,7 @@ a:hover {
 
 h1 {
     color: var(--white);
-    text-shadow: 0 2px 1px var(--grey-blue);
+    text-shadow: 2px 2px 1px var(--grey-blue);
 }
 
 h2 {
@@ -63,7 +63,11 @@ label {
 
 .claim-disclaimer {
     margin: 1rem 0;
+}
+
+.claim-disclaimer p {
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 .claim-disclaimer button {
@@ -133,13 +137,18 @@ label {
 
 }
 
-/* Max width */
+/* Max width 
+    Requires a skeleton rework for the header. 
+    It should've all been inside of main
+    This skeleton doesn't work with flex very well
+*/
 @media screen and (min-width:1600px){
     body {
         background-color: green;
     }
 
     .main-content {
+        display: flex;
         max-width: 1600px;
     }
 }
