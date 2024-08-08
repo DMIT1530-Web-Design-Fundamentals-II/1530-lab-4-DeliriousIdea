@@ -63,12 +63,14 @@ label {
 
 .claim-disclaimer {
     margin: 1rem 0;
+    text-align: center;
 }
 
 .claim-disclaimer button {
     background-color: var(--grey-blue);
     color: var(--white);
     border-radius: 0.3rem;
+    margin-bottom: 1rem;
 }
 
 .form-content {
