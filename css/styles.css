@@ -23,30 +23,85 @@ body {
     1. be positioned at the top of the page
     2. have white text
     3. have a drop-shadow on the text
-
-    Palette: 
-
-    Form Background (gray) color: #808080;
-    Paragraphs (dark-gray) color: #33333;
-    Try free               color: #ffbf0f;
-    Claim button           color: #202224;
 */
 
 /* Global */
-
-p {
-    color: #333333;
+body {
+    padding: 0 1rem;
 }
 
-.main-content {
+h1,
+h2 {
+    color: var(--black);
+}
+
+
+header {
+    display: flex;
+    gap: 1rem;
+}
+
+img {
+    max-width: 20px;
+}
+
+p,
+label {
+    color: var(--grey-blue)
+}
+
+.form-content {
+    background-color: var(--mid-grey);
+    padding-left: 1rem;
+}
+
+.form-header {
+    background-color: var(--yellow);
+}
+
+.form-header p {
+    color: var(--white)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Mobile view */
 
+body {
+    background-color: yellow;
+}
 
 /* Medium width*/
-@media screen and (min-width: 800){
-    
+@media screen and (min-width: 800px) {
+    body {
+        background-color: blue;
+    }
+
+    .form-content {
+        max-width: 1600px;
+    }
+
+    .your-account,
+    .about-you {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about-you .first-name,
+    .about-you .last-name,
+    .about-you .date-of-birth,
+    .about-you .business-type,
+    .your-account,
+    .your-account .username,
+    .your-account .email-address,
+    .your-account .password {
+        flex: 1;
+        width: 50%;
+    }
+
 }
 
 /* Max width */
