@@ -26,19 +26,30 @@ body {
 */
 
 /* Global */
-body {
-    padding: 0 1rem;
+
+a {
+    color: var(--black);
 }
 
-h1,
+a:hover {
+    color:var(--grey-blue-hover); /* Can't notice, but it's there */
+}
+
+h1 {
+    color: var(--white);
+    text-shadow: 0 2px 1px var(--grey-blue);
+}
+
 h2 {
     color: var(--black);
 }
 
-
 header {
     display: flex;
     gap: 1rem;
+    background: url(../img/work-at-home-with-pets.webp);
+    background-repeat: no-repeat;
+    height: 750px; /* random, image needs height */
 }
 
 img {
@@ -50,35 +61,54 @@ label {
     color: var(--grey-blue)
 }
 
-.form-content {
-    background-color: var(--mid-grey);
-    padding-left: 1rem;
+.claim-disclaimer {
+    margin: 1rem 0;
 }
 
-.form-header {
+.claim-disclaimer button {
+    background-color: var(--grey-blue);
+    color: var(--white);
+    border-radius: 0.3rem;
+}
+
+.form-content {
+    background-color: var(--mid-grey);
+}
+
+.form-content > p {
     background-color: var(--yellow);
+    color: var(--white);
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .form-header p {
     color: var(--white)
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.main-content > div {
+    margin: 0 1rem;
 }
 
 /* Mobile view */
 
-body {
-    background-color: yellow;
+.your-account div,
+.about-you div {
+    padding-top: 1rem;
+}
+
+.your-account div > *,
+.about-you div > * {
+    padding-top: unset;
+}
+
+.form-text > h2 {
+    font-size: 3rem;
 }
 
 /* Medium width*/
 @media screen and (min-width: 800px) {
-    body {
-        background-color: blue;
-    }
 
     .form-content {
         max-width: 1600px;
@@ -90,21 +120,20 @@ body {
         flex-wrap: wrap;
     }
 
-    .about-you .first-name,
-    .about-you .last-name,
-    .about-you .date-of-birth,
-    .about-you .business-type,
-    .your-account,
-    .your-account .username,
-    .your-account .email-address,
-    .your-account .password {
-        flex: 1;
+    .about-you > div,
+    .your-account > div {
         width: 50%;
     }
 
 }
 
 /* Max width */
-@media screen and (min-width:1600){
-    
+@media screen and (min-width:1600px){
+    body {
+        background-color: green;
+    }
+
+    .main-content {
+        max-width: 1600px;
+    }
 }
